@@ -1,6 +1,6 @@
 FROM alpine:3.8
 
-LABEL maintainer=endpot@gmail.com
+MAINTAINER endpot@gmail.com
 
 ENV SSR_SERVER_PORT 443
 ENV SSR_PASSWORD 1q2w3e4r
