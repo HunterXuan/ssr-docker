@@ -1,12 +1,12 @@
-FROM alpine:3.6
+FROM alpine:3.8
 
-LABEL maintainer="https://github.com/starriv"
+LABEL maintainer=endpot@gmail.com
 
-ENV SSR_SERVER_PORT 50080
+ENV SSR_SERVER_PORT 443
 ENV SSR_PASSWORD 1q2w3e4r
-ENV SSR_METHOD aes-128-cfb
-ENV SSR_PROTOCOL auth_aes128_md5
-ENV SSR_OBFS tls1.2_ticket_auth_compatible
+ENV SSR_METHOD chacha20
+ENV SSR_PROTOCOL auth_sha1_v4
+ENV SSR_OBFS tls1.2_ticket_auth
 
 RUN apk update && \
     apk --no-cache upgrade && \
